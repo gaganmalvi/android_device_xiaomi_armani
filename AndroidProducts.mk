@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-$(LOCAL_DIR)/hexagon.mk
+$(LOCAL_DIR)/aoscp.mk
