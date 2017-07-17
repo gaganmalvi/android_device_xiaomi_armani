@@ -21,12 +21,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/armani/device.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/armani/armani-vendor.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common XPe stuff
+$(call inherit-product, vendor/XPe/config/common.mk)
+
+$(call inherit-product, vendor/XPe/config/telephony.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := armani
-PRODUCT_NAME := lineage_armani
+PRODUCT_NAME := xpe_armani
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := HM 1S
 PRODUCT_MANUFACTURER := Xiaomi
