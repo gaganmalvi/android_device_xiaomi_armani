@@ -22,7 +22,7 @@ $(call inherit-product, device/xiaomi/armani/device.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/armani/armani-vendor.mk)
 
 # Inherit some common aoscp stuff
-$(call inherit-product, vendor/aoscp/configs/common.mk)
+$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := armani
