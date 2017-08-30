@@ -39,6 +39,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
+	android.hardware.audio@2.0-impl \
+	android.hardware.audio.effect@2.0-impl \
     audio.a2dp.default \
     audio.primary.msm8226 \
     audio.r_submix.default \
@@ -59,6 +61,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+	android.hardware.bluetooth@1.0-impl \
     bdaddr_xiaomi
 
 PRODUCT_COPY_FILES += \
@@ -80,6 +83,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+	android.hardware.graphics.allocator@2.0-impl \
+	android.hardware.graphics.mapper@2.0-impl \
+	android.hardware.graphics.composer@2.1-impl \
     copybit.msm8226 \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
@@ -94,7 +100,10 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
-
+	
+# Keymaster
+	PRODUCT_PACKAGES += \
+	android.hardware.keymaster@3.0-impl
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
@@ -120,6 +129,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
+	android.hardware.light@2.0-impl \
     lights.msm8226
 
 # Media
@@ -165,6 +175,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+	android.hardware.power@1.0-impl \
     power.msm8226
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -203,6 +214,7 @@ PRODUCT_PACKAGES += \
     WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
+	android.hardware.sensors@1.0-impl
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
@@ -213,7 +225,11 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     libwcnss_qmi \
     wcnss_service
-
+	
+# Vibrator
+PRODUCT_PACKAGES += \
+	android.hardware.vibrator@1.0-impl
+	android.hardware.wifi@1.0-service \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ro.disableWifiApFirmwareReload=true
