@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.vibrator@1.0-impl
 	android.hardware.wifi@1.0-service \
+	
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ro.disableWifiApFirmwareReload=true
