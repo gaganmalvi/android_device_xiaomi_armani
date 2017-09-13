@@ -155,3 +155,16 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/armani/BoardConfigVendor.mk
+
+# SDCLANG Support
+ifneq ($(HOST_OS),darwin)
+
+SDCLANG := true
+
+#SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+#SDCLANG_PATH := prebuilts/clang/linux-x86/host/3.6/bin
+SDCLANG_PATH := prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64/bin
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+
+endif
+
