@@ -137,6 +137,19 @@ BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 # Snapdragon LLVM
 TARGET_USE_SDCLANG := true
 
+# SDCLANG Support
+ifneq ($(HOST_OS),darwin)
+
+SDCLANG := true
+
+#SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+#SDCLANG_PATH := prebuilts/clang/linux-x86/host/3.6/bin
+SDCLANG_PATH := prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64/bin
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+
+endif
+
+
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
