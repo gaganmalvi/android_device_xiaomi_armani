@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl.legacy \
     camera.msm8226 \
     libxml2 \
-    Snap
+    Camera2
 
 # Connectivity
 PRODUCT_PACKAGES += \
